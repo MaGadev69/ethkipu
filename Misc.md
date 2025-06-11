@@ -28,6 +28,7 @@ uint256 timestamp: la marca de tiempo del evento.
 Los eventos se usan para dejar un registro accesible y eficiente de acciones importantes dentro del contrato, 
 como nuevas ofertas, depósitos, retiros, etc. Puedes ver esos eventos fuera del contrato usando herramientas como Etherscan o desde aplicaciones web conectadas a la blockchain.
 # ----------------------------------------------------------------
+Modificadores como checkDead actualizan estados, pero no rechazan transacciones a menos que incluyan un require.
 # ----------------------------------------------------------------
 
 
