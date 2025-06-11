@@ -6,7 +6,7 @@ La finalizacion de la subasta se genera de dos formas:
       ofertar()
       retirarDeposito()
       retirarComisiones()
-  - Manualmente mediante funcion finalizarSubasta
+  - Manualmente mediante funcion finalizarSubasta(solo si ya se cumplio la duracion de la subasta)
 En ese momento emite SubastaFinalizada.
 
 
