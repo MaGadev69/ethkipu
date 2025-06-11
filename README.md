@@ -82,7 +82,7 @@ function retirarComisiones() public onlyOwner
 ```
 Transfiere al owner el 2% acumulado de las comisiones.
 
-## Funciones de Consulta
+### Funciones de Consulta
 
 ```solidity
 function obtenerGanador() public view → (address, uint256)
@@ -90,7 +90,7 @@ function obtenerOfertas() public view → (address[] memory, uint256[] memory)
 function tiempoRestante() public view → uint256
 ```
 
-## Eventos
+### Eventos
 
 Registros permanentes en la blockchain, en los logs de la tx que los emitió:
 
