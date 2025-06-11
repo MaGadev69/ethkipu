@@ -20,7 +20,7 @@ address[] public participantes;     // Lista de todos los postores
 
 ## Flujo Principal
 
-### Hacer una Oferta
+### a- Hacer una Oferta
 
 ```solidity
 function ofertar() public payable
@@ -41,14 +41,14 @@ function ofertar() public payable
 emit NuevaOferta(msg.sender, msg.value, block.timestamp);
 ```
 
-### Retiro de Excedentes Durante la Subasta
+### b- Retiro de Excedentes Durante la Subasta
 
 ```solidity
 function retirarSaldoPrevio() public
 ```
 Para el ganador actual: Retira solo el exceso sobre su última oferta válida.
 
-### Finalización
+### c- Finalización
 
 La finalización de la subasta se genera de dos formas:
 - **Automáticamente** cuando el tiempo_limite fue alcanzado y se interactúa con estas funciones:
@@ -67,7 +67,7 @@ Marca `finalizada = true` y emite evento:
 emit SubastaFinalizada(ganador, oferta_mas_alta);
 ```
 
-### Retiros Post-Subasta
+### d- Retiros Post-Subasta
 
 ```solidity
 function retirarDeposito() public
@@ -75,14 +75,14 @@ function retirarDeposito() public
 - **Perdedores:** Reciben su depósito menos 2% de comisión.
 - **Ganador:** No puede retirar (debe cumplirse su oferta).
 
-### Retiro de Comisiones por el Owner
+### e- Retiro de Comisiones por el Owner
 
 ```solidity
 function retirarComisiones() public onlyOwner
 ```
 Transfiere al owner el 2% acumulado de las comisiones.
 
-### Funciones de Consulta
+## Funciones de Consulta
 
 ```solidity
 function obtenerGanador() public view → (address, uint256)
@@ -90,7 +90,7 @@ function obtenerOfertas() public view → (address[] memory, uint256[] memory)
 function tiempoRestante() public view → uint256
 ```
 
-### Eventos
+## Eventos
 
 Registros permanentes en la blockchain, en los logs de la tx que los emitió:
 
