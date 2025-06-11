@@ -18,7 +18,7 @@ mapping(address => uint256) public depositos_usuarios; // mapping de fondos por 
 address[] public participantes;     // Lista de todos los postores
 ```
 
-## Flujo Principal
+## 1- Flujo Principal
 
 ### a- Hacer una Oferta
 
@@ -82,7 +82,7 @@ function retirarComisiones() public onlyOwner
 ```
 Transfiere al owner el 2% acumulado de las comisiones.
 
-## Funciones de Consulta
+## 2- Funciones de Consulta
 
 ```solidity
 function obtenerGanador() public view → (address, uint256)
@@ -90,7 +90,7 @@ function obtenerOfertas() public view → (address[] memory, uint256[] memory)
 function tiempoRestante() public view → uint256
 ```
 
-## Eventos
+## 3- Eventos
 
 Registros permanentes en la blockchain, en los logs de la tx que los emitió:
 
